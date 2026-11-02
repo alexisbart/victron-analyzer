@@ -1,7 +1,11 @@
-def filter_dates(df, start, end):
+def filter_dates(
+    df,
+    start_datetime,
+    end_datetime
+):
 
     return df[
-        (df["timestamp"] >= start)
+        (df["timestamp"] >= start_datetime)
         &
-        (df["timestamp"] <= end)
+        (df["timestamp"] <= end_datetime)
     ]
